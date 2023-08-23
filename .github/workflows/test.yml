@@ -28,6 +28,7 @@ jobs:
       - name: passinput
         run: |
            i1="${{ inputs.App_Deploy_Env }}"
-           code1=$( echo $i1 |cut f1 -d-)
+           code1=$(echo $i1 |cut f1 -d_)
+           
            echo $code1
            
