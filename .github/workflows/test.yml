@@ -31,7 +31,9 @@ jobs:
            i1="${{ inputs.App_Deploy_Env }}"
            code1=$(echo $i1 |cut -f1 -d_)           
            echo $code1
+           echo "code1=$code1 ">> $GITHUB_OUTPUT
       - name: passinput1
         run: |
-           echo "p1"         
+           echo "p1"   
+           
            echo "${{ steps.vars.outputs.code1 }}"
