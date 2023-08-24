@@ -24,6 +24,7 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-latest
+    name: ${{ inputs.App_Deploy_Env}}
     steps:
       - name: passinput
         id: vars
